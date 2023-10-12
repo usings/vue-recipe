@@ -1,0 +1,22 @@
+{
+  "name": "root",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "scripts": {
+    "prepare": "lefthook install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.2",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@tsconfig/node18": "^18.2.2",
+    "@types/node": "^18.18.0",
+    "eslint": "^8.50.0",
+    "eslint-presets": "^2.2.2",
+    "lefthook": "^1.5.2",
+    "typescript": "~5.2.2"
+  }
+}
