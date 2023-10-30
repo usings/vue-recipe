@@ -6,7 +6,7 @@ import autoImport from 'unplugin-auto-import/vite'
 import components from 'unplugin-vue-components/vite'
 import unocss from 'unocss/vite'
 import radixResolver from 'radix-vue/resolver'
-import { VueRouterAutoImports as routerResolver } from 'unplugin-vue-router'
+import { getPascalCaseRouteName, VueRouterAutoImports as routerResolver } from 'unplugin-vue-router'
 
 const resolvePath = (path: string) => fileURLToPath(new URL(path, import.meta.url))
 
@@ -26,6 +26,7 @@ export default defineConfig({
       dts: 'src/router.d.ts',
       exclude: ['**/__shared__/**/*'],
       importMode: 'async',
+      getRouteName: (routeNode) => getPascalCaseRouteName(routeNode),
     }), // https://github.com/posva/unplugin-vue-router
 
     vue(),
