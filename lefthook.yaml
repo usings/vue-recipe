@@ -5,14 +5,15 @@
 skip_output:
   - meta
   - skips
+  - execution
 
 pre-commit:
   commands:
-    eslint:
+    lint commit codes:
       glob: '*.{js,ts,vue}'
       run: pnpm eslint {staged_files} --fix
 
 commit-msg:
   commands:
-    commitlint:
+    lint commit message:
       run: pnpm commitlint --edit {1}
