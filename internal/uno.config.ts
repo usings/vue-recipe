@@ -1,3 +1,4 @@
+import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders'
 import { fileURLToPath } from 'node:url'
 import {
   defineConfig,
@@ -5,7 +6,6 @@ import {
   presetUno,
   transformerVariantGroup,
 } from 'unocss'
-import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders'
 
 const iconDirectory = fileURLToPath(new URL('src/assets/icons', import.meta.url))
 

@@ -1,6 +1,5 @@
-import { createApp } from 'vue'
-import '@/design'
 import app from '@/app.vue'
+import '@/design'
 
 const client = createApp(app)
 
@@ -9,6 +8,6 @@ const modules = import.meta.glob<{
 }>('./modules/*.ts', { eager: true })
 
 Object.values(modules)
-  .forEach((i) => i.install?.(client))
+  .forEach(index => index.install?.(client))
 
 client.mount('#app')
