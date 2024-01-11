@@ -6,10 +6,10 @@ const store = useCounterStore()
   <section class="flex items-center gap-20">
     <span class="w-50">{{ store.count }}</span>
     <button
-      class="flex items-center justify-center"
+      class="flex items-center justify-center bg-transparent"
       @click="store.increment"
     >
-      <i class="icon:add bg-blue" />
+      <IconAdd />
     </button>
   </section>
 </template>
