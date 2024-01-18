@@ -13,10 +13,10 @@
     "@commitlint/config-conventional": "^18.4.4",
     "@tsconfig/node18": "^18.2.2",
     "@types/node": "^18.18.0",
-    "@witheslint/core": "^0.7.0",
-    "@witheslint/preset-vue": "^0.7.0",
+    "@witheslint/core": "^0.8.0",
+    "@witheslint/preset-vue": "^0.8.0",
     "eslint": "^8.56.0",
-    "lefthook": "^1.5.5",
+    "lefthook": "^1.5.7",
     "typescript": "~5.3.3"
   }
 }
