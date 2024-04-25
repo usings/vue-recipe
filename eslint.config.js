@@ -1,14 +1,16 @@
-import { defineFlatConfig, presetBasic, presetVue } from 'eslint-presets'
+import { defineConfig } from '@witheslint/core'
+import { presetVue } from '@witheslint/preset-vue'
 
-export default defineFlatConfig([
-  presetBasic({ enableTs: true }),
-  presetVue({ enableTs: true }),
-  {
-    rules: {
-      'no-undef': 'off',
-      'unicorn/prevent-abbreviations': 'off',
-      'unicorn/no-array-for-each': 'off',
-      'unicorn/no-abusive-eslint-disable': 'off',
+export default defineConfig({
+  presets: [
+    presetVue(),
+  ],
+  extends: [
+    {
+      rules: {
+        'no-undef': 'off',
+        'unicorn/catch-error-name': 'off',
+      },
     },
-  },
-])
+  ],
+})

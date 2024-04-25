@@ -1,0 +1,22 @@
+{
+  "extends": "@internal/tsconfig/dom.json",
+  "include": [
+    "shims/*.d.ts",
+    "src/**/*.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "types":[
+      "vite/client",
+      "unplugin-vue-router/client",
+      "vite-plugin-vue-layouts/client"
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
