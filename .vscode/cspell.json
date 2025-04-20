@@ -1,0 +1,16 @@
+{
+  "ignorePaths": [
+    "node_modules",
+    "dist"
+  ],
+  "words": [
+    "commitlint",
+    "lefthook",
+    "radash",
+    "unhead",
+    "unocss",
+    "unplugin",
+    "vueuse",
+    "witheslint"
+  ]
+}
