@@ -2,7 +2,6 @@ import path from 'node:path'
 import { unheadVueComposablesImports as unheadImports } from '@unhead/vue'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import radixResolver from 'radix-vue/resolver'
 import unocss from 'unocss/vite'
 import autoImport from 'unplugin-auto-import/vite'
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
@@ -13,7 +12,7 @@ import { getPascalCaseRouteName, VueRouterAutoImports as routerImports } from 'u
 import vueRouter from 'unplugin-vue-router/vite'
 import { defineConfig } from 'vite'
 import vueDevTools from 'vite-plugin-vue-devtools'
-import layouts from 'vite-plugin-vue-layouts'
+import layouts from 'vite-plugin-vue-layouts-next'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -30,7 +29,7 @@ export default defineConfig({
       dts: 'shims/routes.d.ts',
       routesFolder: 'src/views',
       importMode: 'async',
-      getRouteName: routeNode => getPascalCaseRouteName(routeNode),
+      getRouteName: (routeNode: any) => getPascalCaseRouteName(routeNode),
     }), // https://github.com/posva/unplugin-vue-router
 
     layouts({
@@ -71,7 +70,6 @@ export default defineConfig({
       dts: 'shims/components.d.ts',
       globs: ['src/components/**/*.vue'],
       resolvers: [
-        radixResolver(),
         iconsResolver({ prefix: false, enabledCollections: ['icon'] }),
       ],
     }), // https://github.com/unplugin/unplugin-vue-components

@@ -25,7 +25,7 @@
     "types":[
       "vite/client",
       "unplugin-vue-router/client",
-      "vite-plugin-vue-layouts/client"
+      "vite-plugin-vue-layouts-next/client"
     ],
     "paths": {
       "@/*": ["./src/*"]
